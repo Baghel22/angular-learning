@@ -87,9 +87,7 @@ chnageValue(){
 heckdays(){
   const array1 = [5, 12, 8, 130, 44];
 const isLargeNumber = (element:any) => element > 13;
-console.log(array1.findIndex(isLargeNumber));
-
-    
+console.log(array1.findIndex(isLargeNumber));    
 }
 
 }
