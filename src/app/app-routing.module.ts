@@ -7,6 +7,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { TestingComponent } from './components/testing/testing.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ContactusComponent } from './static/contactus/contactus.component';
+import { SearchFilterComponent } from './components/search-filter/search-filter.component';
 
 const routes: Routes = [
   {path :'',redirectTo:'homepage',pathMatch:'full'},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path:'homepage',component:HomepageComponent},
   {path:'signup', component:SignupComponent},
   {path:'login',component:LoginComponent},
-  {path:'contactus',component:ContactusComponent}
+  {path:'contactus',component:ContactusComponent},
+  {path:'serach-filter',component:SearchFilterComponent}
+
 ];
 
 @NgModule({

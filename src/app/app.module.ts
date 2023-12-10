@@ -19,6 +19,8 @@ import { ContactusComponent } from './static/contactus/contactus.component';
 import { SplitPipe } from './customCreatePipe/split.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { ChnagecolorDirective } from './directivescopmponent/chnagecolor.directive';
+import { SearchFilterComponent } from './components/search-filter/search-filter.component';
+import { FilterPipe } from './customCreatePipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ChnagecolorDirective } from './directivescopmponent/chnagecolor.directi
     LoginComponent,
     ContactusComponent,
     SplitPipe,
-    ChnagecolorDirective
+    ChnagecolorDirective,
+    SearchFilterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

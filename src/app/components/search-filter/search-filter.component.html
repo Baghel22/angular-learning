@@ -1,0 +1,19 @@
+<p>search-filter works!</p>
+
+
+<input [(ngModel)]="searchText" placeholder="search text goes here">
+<input [(ngModel)]="fromDate" type="date" placeholder="search text goes here">
+
+<ul>
+  <li *ngFor="let c of characters | filter: searchText">
+    {{ c }} 
+  </li>
+</ul>
+
+<button (click)="serachWithGetApiDataPassInQueryParams()">search</button>
+
+<!-- <ul>
+    <li *ngFor="let item of collection | paginate: { itemsPerPage: itemPerPage, currentPage: pageSize,totalItems:totalItems }"> ... </li>
+  </ul>
+
+  <pagination-controls (pageChange)="changePage($event)"></pagination-controls> -->
