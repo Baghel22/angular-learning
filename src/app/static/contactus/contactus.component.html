@@ -1,0 +1,70 @@
+<div class="styleing">
+    <!-- <form [formGroup]="contactUsForm">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputEmail3" formControlName="name" placeholder="Enter Name">
+
+    </div>
+</div>
+</form> -->
+<div>
+    <p>hello@gmail.com</p>
+</div>
+
+<div class="data">
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    Customer
+                </td>
+                <td>
+                    Work
+                </td>
+            </tr>
+        </thead>
+        <tbody> <!--  getting the data from the API and showing here-->
+            <!-- <tr *ngFor="let item of entriesData">
+                <th>
+                    {{item?.API}}
+                </th>
+                <th>{{item?.Category}}</th>
+            </tr> -->
+        </tbody>
+    </table>
+</div>
+<div>
+<!--  showing the modified data of countries -->
+    <select class="form-control" (change)="getApiValue($event)">
+        <option value="">Select country</option>
+        <option [value]="item?.code" *ngFor="let item of firstArray">{{item?.name }}</option>
+    </select>
+</div>
+<div><!-- showing the modified data of state -->
+    <select class="form-control" (change)="getSDtateValue($event)">
+        <option value="">Select state</option>
+        <option [value]="item?.stateCode" *ngFor="let item of myArrayFiltered">{{item?.name }}</option>
+    </select>
+</div>
+<!--  showing the data of city -->
+<div><select class="form-control">
+    <option value="">Select city</option>
+    <option [value]='item?.name' *ngFor="let item of myArrayFilteredcity">
+        {{item?.name}}
+    </option>
+</select>
+</div>
+<label for="file" [ngStyle]="isPreview ? {color : 'red'} : {'color': 'blue'}"
+>Attachment color change with condition style</label>
+<label for="file" 
+[ngClass]="isPreview ? 'my_class1' : 'my_class2'"
+>Attachment color change with condition class</label>
+<button (click)="chnageValue()">chnage Color</button>
+
+
+
+
+<p #pRef id="new">
+ 
+</p>

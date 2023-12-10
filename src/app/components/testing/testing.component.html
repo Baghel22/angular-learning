@@ -1,0 +1,33 @@
+<div class="mainBody" >
+    <p>testing works!</p>
+<button type="button" class="btn btn-primary" (click)="sendDataINquery()">new</button>
+
+<app-bannere (emitValue)="change($event)"></app-bannere>
+<div>
+    {{getValue}}
+</div>
+<table>
+    <thead>
+        <tr>
+            <td>
+                Customet
+            </td>
+            <td>
+                Work
+            </td>
+        </tr>
+    </thead>
+    <tbody> <!--  here using the data and modifying through pipe 
+        " | "  this is the symbol of pipe -->
+         
+        <tr *ngFor="let item of formatedData">
+            <th>
+                {{item?.userType | split}}
+            </th>
+            <th>{{item?.work}}</th>
+        </tr>
+    </tbody>
+</table>
+<div>hello</div>
+
+</div>

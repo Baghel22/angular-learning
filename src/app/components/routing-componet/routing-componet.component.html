@@ -1,0 +1,12 @@
+<p>routing-componet works!</p>
+<app-bannere [namehs]="rowData" (emitValue)="oncheckValue($event)"></app-bannere>
+<button (click)="back('hello')">back</button>
+
+<div class="classname" appChnagecolor>
+    <div class="new onwe" *ngIf="childValue">
+        {{childValue}}
+    </div>
+    <h1>
+        {{queryParamsData?.key}}
+    </h1>
+</div>

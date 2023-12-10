@@ -1,0 +1,31 @@
+<p>homepage works!</p>
+<p>{{name}}</p>
+<h1 >
+    {{email}}
+</h1>
+
+<div *ngIf="checkUi == true">
+    this condition for true
+</div>
+<div *ngIf="checkUi == false">
+    this condition for false
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Name</th>
+        <th scope="col">Date Of Birth</th>
+        <!-- add action new th  -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of newArry">
+        <td>{{item?.name}}</td>
+        <td>{{item?.dateofbirth}}</td>
+        <!-- add button new td and add click function forset item (data )  in localstorage-->
+      </tr>
+   
+    </tbody>
+  </table>
+<button (click)="chnageValue()" >change status</button>
